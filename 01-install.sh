@@ -10,5 +10,5 @@ sudo -v
 
 helm repo add rook https://charts.rook.io/release
 
-helm upgrade --install --create-namespace -n rook-ceph rook-ceph ./rook-ceph -f ./rook-ceph/values.yaml --version 1.13.4 --wait
-helm upgrade --install --create-namespace -n rook-ceph rook-ceph-cluster ./rook-ceph-cluster -f ./rook-ceph/values.yaml -f ./rook-ceph-cluster/values-override.yaml --version 1.13.4 --wait
+helm upgrade --install --create-namespace -n rook-ceph rook-ceph ./rook-ceph-1.13.4 -f ./rook-ceph-1.13.4/values.yaml --wait
+helm upgrade --install --create-namespace -n rook-ceph rook-ceph-cluster ./rook-ceph-cluster-1.13.4 -f ./rook-ceph-cluster-1.13.4/values.yaml -f ./rook-ceph-cluster-1.13.4/values-override.yaml --wait
