@@ -10,5 +10,5 @@ sudo -v
 
 helm repo add rook https://charts.rook.io/release
 
-helm uninstall --create-namespace -n rook-ceph rook-ceph-cluster
-helm uninstall --create-namespace -n rook-ceph rook-ceph
+helm uninstall -n rook-ceph rook-ceph-cluster
+helm uninstall -n rook-ceph rook-ceph
