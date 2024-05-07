@@ -6,11 +6,13 @@ cephClusterSpec:
     count: 3
     allowMultiplePerNode: true
   storage:
-    useAllNodes: true
+    useAllNodes: false
     useAllDevices: false
-    devices:
-      - name: /dev/nvme1n1p2
-        config:
-          osdsPerDevice: "1"
+    nodes:
+      - name: "archlinux"
+        devices: 
+          - name: "/dev/nvme1n1p2"
+            config:
+              osdsPerDevice: "1"
 toolbox:
   enabled: true
