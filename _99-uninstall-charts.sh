@@ -10,8 +10,5 @@ sudo -v
 
 helm repo add rook https://charts.rook.io/release
 
-kubectl -n rook-ceph patch cephcluster rook-ceph --type merge -p '{"spec":{"cleanupPolicy":{"confirmation":"yes-really-destroy-data"}}}'
-kubectl -n rook-ceph delete cephcluster rook-ceph --wait
-
 helm uninstall -n rook-ceph rook-ceph-cluster
 helm uninstall -n rook-ceph rook-ceph
