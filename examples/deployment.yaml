@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dps-rook-ceph-example-consumer
+  namespace: default
+  labels:
+    app: example-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: example-consumer
+  template:
+    metadata:
+      labels:
+        app: example-consumer
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          volumeMounts:
+          - mountPath: "/var/www/html"
+            name: html
+      volumes:
+        - name: html
+          persistentVolumeClaim:
+            claimName: dps-rook-ceph-example-block
