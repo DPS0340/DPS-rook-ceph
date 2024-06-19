@@ -14,3 +14,4 @@ helm upgrade --install --create-namespace -n rook-ceph rook-ceph ./rook-ceph-1.1
 helm upgrade --install --create-namespace -n rook-ceph rook-ceph-cluster ./rook-ceph-cluster-1.13.4 -f ./rook-ceph-cluster-1.13.4/values.yaml -f ./rook-ceph-cluster-1.13.4/values-override.yaml --wait
 
 sudo modprobe rbd
+sudo modprobe ceph
