@@ -11,7 +11,7 @@ cephClusterSpec:
     nodes:
       - name: "archlinux"
         devices: 
-          - name: "/dev/nvme0n1p2"
+          - name: "/dev/nvme1n1p2"
             config:
               osdsPerDevice: "1"
 toolbox:
